@@ -26,18 +26,26 @@ def uruchom_quiz(pytania):
         print(f"\nPytanie {i}/{liczba_pytan}:")
         print(f"** {q['question']} **\n")
 
-        # Wyświetlanie opcji odpowiedzi
-        opcje = q['options']
-        for opcja in opcje:
-            print(f"  {opcja['id']}. {opcja['text']}")
+        # Kopiujemy opcje, aby nie modyfikować oryginalnej listy w pamięci na stałe,
+        # a następnie losowo je mieszamy.
+        opcje = list(q['options'])
+        random.shuffle(opcje)
 
-        # Pobieranie odpowiedzi od użytkownika (obsługa wielu poprawnych odpowiedzi, np. w pytaniu 22 i 34)
-        poprawne_id = [o['id'] for o in opcje if o['is_correct']]
-        
+        # Przypisujemy nowe numery wyświetlane (1, 2, 3...) dla przemieszanych opcji,
+        # zapamiętując jednocześnie, które z nich faktycznie są poprawne.
+        poprawne_wysietlane_ids = []
+        mapa_opcji = {}
+
+        for nowy_idx, opcja in enumerate(opcje, 1):
+            mapa_opcji[nowy_idx] = opcja
+            print(f"  {nowy_idx}. {opcja['text']}")
+            if opcja['is_correct']:
+                poprawne_wysietlane_ids.append(nowy_idx)
+
+        # Pobieranie odpowiedzi od użytkownika
         while True:
             odpowiedz_str = input("\nTwoja odpowiedź (podaj numer opcji lub numery oddzielone przecinkiem): ").strip()
             try:
-                # Rozdzielenie po przecinku, jeśli użytkownik podaje kilka odpowiedzi
                 wybrane_ids = [int(x.strip()) for x in odpowiedz_str.split(',') if x.strip()]
                 if wybrane_ids:
                     break
@@ -45,14 +53,13 @@ def uruchom_quiz(pytania):
                 pass
             print("Nieprawidłowy format. Wpisz numer (np. 2) lub numery po przecinku (np. 1, 3).")
 
-        # Sprawdzenie poprawności
-        # Użytkownik musi podać dokładnie te same ID, które są oznaczone jako poprawne
-        if set(wybrane_ids) == set(poprawne_id):
+        # Sprawdzenie poprawności na podstawie przemieszanych numerów
+        if set(wybrane_ids) == set(poprawne_wysietlane_ids):
             print("✅ Poprawnie!")
             punkty += 1
         else:
             print("❌ Błędnie.")
-            poprawne_teksty = [f"{o['id']}. {o['text']}" for o in opcje if o['is_correct']]
+            poprawne_teksty = [f"{idx}. {mapa_opcji[idx]['text']}" for idx in poprawne_wysietlane_ids]
             print(f"Prawidłowa odpowiedź to: {', '.join(poprawne_teksty)}")
 
         print("-" * 60)

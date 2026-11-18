@@ -526,6 +526,32 @@
     ]
   },
   {
+    "question_id": 22,
+    "question": "Do obsługi ruchu typu BUM w sieci VxLAN można zastosować mechanizm:",
+    "options": [
+      {
+        "id": 1,
+        "text": "replikacji do wszystkich urządzeń w sieci, które pełnią rolę VTEP (head-end replication)",
+        "is_correct": true
+      },
+      {
+        "id": 2,
+        "text": "multicast",
+        "is_correct": true
+      },
+      {
+        "id": 3,
+        "text": "Split Horizon",
+        "is_correct": false
+      },
+      {
+        "id": 4,
+        "text": "tunelowania NVGRE",
+        "is_correct": false
+      }
+    ]
+  },
+  {
     "question_id": 23,
     "question": "Stworzenie ścieżki statycznej powiązanej z interfejsem null0 jest używane przy BGP aby:",
     "options": [
@@ -803,6 +829,16 @@
         "id": 4,
         "text": "Route Reflector",
         "is_correct": true
+      },
+      {
+        "id": 5,
+        "text": "AS Confederation",
+        "is_correct": true
+      },
+      {
+        "id": 6,
+        "text": "AS Aggregation",
+        "is_correct": false
       }
     ]
   },
@@ -834,32 +870,6 @@
   },
   {
     "question_id": 35,
-    "question": "Zaznacz wszystkie rozwiązania, które umożliwiają ograniczenie liczby sesji iBGP w dużych sieciach ISP:",
-    "options": [
-      {
-        "id": 1,
-        "text": "BGP free core",
-        "is_correct": false
-      },
-      {
-        "id": 2,
-        "text": "AS Confederation",
-        "is_correct": true
-      },
-      {
-        "id": 3,
-        "text": "Path Prepending",
-        "is_correct": false
-      },
-      {
-        "id": 4,
-        "text": "AS Aggregation",
-        "is_correct": false
-      }
-    ]
-  },
-  {
-    "question_id": 36,
     "question": "Route Distinguisher to:",
     "options": [
       {
@@ -885,7 +895,7 @@
     ]
   },
   {
-    "question_id": 37,
+    "question_id": 36,
     "question": "Stan po poprawnym nawiązaniu sesji BGP z danym sąsiadem to:",
     "options": [
       {
@@ -911,7 +921,7 @@
     ]
   },
   {
-    "question_id": 38,
+    "question_id": 37,
     "question": "W usłudze AToM (Any Transport over MPLS) do przenoszenia informacji identyfikującej pseudolącze L2:",
     "options": [
       {
@@ -937,7 +947,7 @@
     ]
   },
   {
-    "question_id": 39,
+    "question_id": 38,
     "question": "Atrybut AS_PATH:",
     "options": [
       {
@@ -953,6 +963,32 @@
       {
         "id": 3,
         "text": "zawiera prefiks rozgłaszany w wiadomości Update",
+        "is_correct": false
+      },
+      {
+        "id": 4,
+        "text": "jest rozgłaszany tylko w sesjach, w których uczestniczy Route Reflector",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "question_id": 39,
+    "question": "Atrybut AS_PATH: (powtórzenie pytania)",
+    "options": [
+      {
+        "id": 1,
+        "text": "jest wykorzystywany do eliminacji pętli routingowych",
+        "is_correct": true
+      },
+      {
+        "id": 2,
+        "text": "zawiera prefiks rozgłaszany w wiadomości Update",
+        "is_correct": false
+      },
+      {
+        "id": 3,
+        "text": "jest rozgłaszany tylko w sesjach iBGP",
         "is_correct": false
       },
       {
@@ -990,32 +1026,6 @@
   },
   {
     "question_id": 41,
-    "question": "Atrybut AS_PATH: (powtórzenie pytania)",
-    "options": [
-      {
-        "id": 1,
-        "text": "jest wykorzystywany do eliminacji pętli routingowych",
-        "is_correct": true
-      },
-      {
-        "id": 2,
-        "text": "zawiera prefiks rozgłaszany w wiadomości Update",
-        "is_correct": false
-      },
-      {
-        "id": 3,
-        "text": "jest rozgłaszany tylko w sesjach iBGP",
-        "is_correct": false
-      },
-      {
-        "id": 4,
-        "text": "jest rozgłaszany tylko w sesjach, w których uczestniczy Route Reflector",
-        "is_correct": false
-      }
-    ]
-  },
-  {
-    "question_id": 42,
     "question": "Podstawową funkcją sesji iBGP jest:",
     "options": [
       {
@@ -1041,7 +1051,7 @@
     ]
   },
   {
-    "question_id": 43,
+    "question_id": 42,
     "question": "Które z poniższych stwierdzeń dotyczących etykiety MPLS (MPLS label) jest prawdziwe?",
     "options": [
       {
@@ -1067,7 +1077,7 @@
     ]
   },
   {
-    "question_id": 44,
+    "question_id": 43,
     "question": "VTEP jest to:",
     "options": [
       {
@@ -1093,7 +1103,7 @@
     ]
   },
   {
-    "question_id": 45,
+    "question_id": 44,
     "question": "Systemy autonomiczne (AS) przy użyciu protokołu BGP wymieniają informacje o:",
     "options": [
       {
@@ -1119,7 +1129,7 @@
     ]
   },
   {
-    "question_id": 46,
+    "question_id": 45,
     "question": "AFI/SAFI są to:",
     "options": [
       {
@@ -1140,7 +1150,7 @@
     ]
   },
   {
-    "question_id": 48,
+    "question_id": 46,
     "question": "Router szkieletowy MPLS podejmuje decyzje dotyczące kierowania pakietów IP na podstawie",
     "options": [
       {
