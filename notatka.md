@@ -260,13 +260,7 @@
 2. jest rozgłaszany tylko w sesjach iBGP
 3. zawiera prefiks rozgłaszany w wiadomości Update
 4. jest rozgłaszany tylko w sesjach, w których uczestniczy Route Reflector
-
-### Atrybut AS_PATH: (powtórzenie pytania)
-
-1. **jest wykorzystywany do eliminacji pętli routingowych**
-2. zawiera prefiks rozgłaszany w wiadomości Update
-3. jest rozgłaszany tylko w sesjach iBGP
-4. jest rozgłaszany tylko w sesjach, w których uczestniczy Route Reflector
+5. **jest wykorzystywany do eliminacji pętli routingowych**
 
 ### W protokole BGP decyzje routingowe podejmowane są:
 
