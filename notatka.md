@@ -62,10 +62,10 @@
 
 ### Zaznacz sekwencję pakietów IS-IS odpowiadającą synchronizacji baz LSDB na łączach punkt-punkt
 
-1. R1 -> CSNP -> R2, R2 -> PSNP -> R1, R1 -> LSP -> R2
+1. R1 -> CSPN -> R2, R2 -> PSNP -> R1, R1 -> LSP -> R2
 2. R1 -> PSPN -> R2, R2 -> LSP -> R1, R1 -> CSPN -> R2
 3. R1 -> CSPN -> R2, R1 -> LSP -> R2, R1 -> PSPN -> R2
-4. **R1 -> CSNP -> R2, R2 -> LSP -> R1, R1 -> PSPN -> R2**
+4. **R1 -> CSPN -> R2, R2 -> LSP -> R1, R1 -> PSPN -> R2**
 
 ### Wiadomości Summary LSA typ 3 przekazują:
 
@@ -196,19 +196,13 @@
 3. **MED (Multi Exit Discriminator)**
 4. Local Preference
 
-### Który mechanizm/protokół jest wykorzystywany do inżynierii ruchu w sieci IP/MPLS?
+### Które mechanizmy/protokóły są wykorzystywany do inżynierii ruchu w sieci IP/MPLS?
 
 1. MP-BGP (Multi-Protocol BGP)
 2. **CSPF (Constrained Shortest Path First)**
 3. LDP (Label Distribution Protocol)
 4. BGP-LS (BGP Link State)
-
-### Który mechanizm/protokół jest wykorzystywany do inżynierii ruchu w sieci IP/MPLS?
-
-1. BGP-LS (BGP Link State)
-2. MP-BGP (Multi-Protocol BGP)
-3. **RSVP-TE**
-4. LDP (Label Distribution Protocol)
+5. **RSVP-TE**
 
 ### W technice Segment Routing z data plane opartym na protokole MPLS wykorzystuje się:
 
@@ -225,13 +219,6 @@
 4. **Route Reflector**
 5. **AS Confederation**
 6. AS Aggregation
-
-### Do obsługi ruchu typu BUM w sieci VxLAN można zastosować mechanizm:
-
-1. **multicast**
-2. tunelowania NVGRE
-3. **replikacji do wszystkich urządzeń w sieci, które pełnią rolę VTEP (head-end replication)**
-4. Split Horizon
 
 ### Route Distinguisher to:
 
